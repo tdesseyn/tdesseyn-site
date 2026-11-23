@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>taylor desseyn | new vlog: hiring in buenos aires (part 2)</title>
+<meta name="description" content="new vlog: building the brand, hiring in buenos aires (part 2). then step inside for ai job search tips and the gc 2.0 podcast.">
+<meta property="og:title" content="new vlog: building the brand | hiring in buenos aires (part 2)">
+<meta property="og:image" content="https://i.ytimg.com/vi/at4_I6CiEl0/maxresdefault.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script>
+/* to swap the vlog: change VLOG_ID and VLOG_TITLE. each visitor sees each vlog once. */
+var VLOG_ID="at4_I6CiEl0", VLOG_TITLE="building the brand | hiring in buenos aires (part 2)", SITE="https://taylor.sites.tab.bot/";
+try{ if(new URLSearchParams(location.search).get("intro")!=="1" && localStorage.getItem("seen_"+VLOG_ID)){ location.replace(SITE); } }catch(e){}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:#0b0b0b;color:#f5f5f5;font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif}
+body{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100dvh;padding:20px;gap:18px}
+.tag{font-size:13px;letter-spacing:.12em;text-transform:lowercase;color:#9a9a9a}
+h1{font-size:clamp(20px,3.4vw,34px);font-weight:700;text-align:center;max-width:900px;line-height:1.2;text-transform:lowercase}
+.player{position:relative;width:min(100%,calc((100dvh - 260px)*16/9),1100px);aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:#000;box-shadow:0 20px 60px rgba(0,0,0,.6)}
+.player>div,.player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+button,.btn{font:inherit;font-size:16px;font-weight:600;border-radius:999px;padding:13px 24px;cursor:pointer;text-decoration:none;border:1px solid #f5f5f5;text-transform:lowercase}
+.ghost{background:transparent;color:#f5f5f5}
+.solid{background:#f5f5f5;color:#0b0b0b}
+.small{font-size:13px;color:#9a9a9a;text-decoration:none}
+.small:hover{color:#f5f5f5}
+</style></head>
+<body>
+<div class="tag">new vlog</div>
+<h1 id="t">building the brand | hiring in buenos aires (part 2)</h1>
+<div class="player"><div id="yt"></div></div>
+<div class="row">
+  <button class="ghost" id="snd">tap for sound</button>
+  <a class="btn solid" id="enter" href="https://taylor.sites.tab.bot/">enter site &gt;</a>
+</div>
+<a class="small" href="https://taylordesseyn.beehiiv.com/?utm_source=tdesseyn.com&amp;utm_medium=vlog-intro&amp;utm_campaign=vlog-intro" target="_blank" rel="noopener">get my weekly email</a>
+<script>
+document.getElementById("t").textContent=VLOG_TITLE;
+var enter=document.getElementById("enter"); enter.href=SITE;
+function seen(){try{localStorage.setItem("seen_"+VLOG_ID,"1")}catch(e){}}
+enter.addEventListener("click",seen);
+var player;
+function onYouTubeIframeAPIReady(){
+  player=new YT.Player("yt",{videoId:VLOG_ID,playerVars:{autoplay:1,mute:1,playsinline:1,rel:0,modestbranding:1},
+    events:{onReady:function(e){e.target.mute();e.target.playVideo();seen();},
+            onStateChange:function(e){if(e.data===0){location.href=SITE;}}}});
+}
+document.getElementById("snd").addEventListener("click",function(){
+  if(!player)return; if(player.isMuted()){player.unMute();player.setVolume(100);player.playVideo();this.textContent="mute";}else{player.mute();this.textContent="tap for sound";}
+});
+</script>
+<script src="https://www.youtube.com/iframe_api"></script>
+</body></html>
